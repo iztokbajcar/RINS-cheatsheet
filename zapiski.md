@@ -30,4 +30,7 @@ rosnode list  # prikaže seznam aktivnih vozlišč
 rosnode info <node>  # informacije o vozlišču
 ```
 
-
+## Roslaunch
+```bash
+roslaunch <package> <launchfile.launch> # Zažene launch file `launchfile.launch` v paketu `package`. Uporabno za zaganjanje več node-ov hkrati.
+```
