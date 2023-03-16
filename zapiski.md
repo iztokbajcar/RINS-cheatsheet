@@ -10,10 +10,21 @@ catkin_make
 ## Uporaba
 ```bash
 roscore  # (v korenu workspace-a) zažene glavni ROS program
-
-rosrun <package> <node>  # zažene node `node` paketa `package`
 rospack list  # prikaže seznam paketov
+rosrun <package> <node>  # zažene node `node` paketa `package`
 ```
+
+## Roslaunch
+```bash
+roslaunch <package> <launchfile.launch> # Zažene launch file `launchfile.launch` v paketu `package`. Uporabno za zaganjanje več node-ov hkrati.
+```
+
+## Rosnode
+```bash
+rosnode list  # prikaže seznam aktivnih vozlišč
+rosnode info <node>  # informacije o vozlišču
+```
+
 ## Rostopic
 (`roscore` mora teči)
 ```bash
@@ -24,13 +35,7 @@ rostopic echo <topic>  # izpisuje vsa sporočila, ki pridejo na `topic`
 rostopic hz <topic>  # izpisuje povprečno frekvenco sporočil, ki pridejo na `topic`
 ```
 
-## Rosnode
+## Rosservice
 ```bash
-rosnode list  # prikaže seznam aktivnih vozlišč
-rosnode info <node>  # informacije o vozlišču
-```
-
-## Roslaunch
-```bash
-roslaunch <package> <launchfile.launch> # Zažene launch file `launchfile.launch` v paketu `package`. Uporabno za zaganjanje več node-ov hkrati.
+rosservice call <service> [argumenti...]  # pokliče storitev `service` s podanimi argumenti
 ```
