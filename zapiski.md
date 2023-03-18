@@ -39,3 +39,17 @@ rostopic hz <topic>  # izpisuje povprečno frekvenco sporočil, ki pridejo na `t
 ```bash
 rosservice call <service> [argumenti...]  # pokliče storitev `service` s podanimi argumenti
 ```
+
+## Rosmsg
+```bash
+rosmsg info <topic> # Pokaže tip sporočila na topic `topic`
+```
+
+## Turtlebot
+```bash
+roslaunch turtlebot_teleop keyboard_teleop.launch # Omogoči kontroliranje Turtlebota s tipkovnico
+rviz # Odpre RViz - program za vizualizacijo informacij o robotu
+roslaunch turtlebot_rviz_launchers view_robot.launch  # Odpre RViz za Turtlebota, kjer vidimo meritve senzorjev
+roslaunch turtlebot_rviz_launchers view_navigation.launch # Odpre RViz za Turtlebota, kjer vidimo navigacijo (G-mapping)
+rosrun map_server map_saver -f <file> # Shrani ustvarjeni G-map v datoteko `file`
+```
